@@ -1,0 +1,24 @@
+#Métodos y eventos en Vuejs
+
+La ides es que los datos se muestren dinámicamente, es decir, la variable `mostrar` cambie de forma automática.
+
+## Métodos
+
+Para añadir métodos en la instancia de `Vue`, al igual que se tiene el elemento data, se adiciona al objeto app la propiedad methods donde van a estar las funciones.
+
+## Eventos
+
+Los eventos a los que vue puede acceder son los mismos a los q puede acceder el DOM, es decir, eventos como onclick, onmouseover, onmouseout, onkeypress etc.
+
+
+### RUN APP
+
+Cada vez que se lanza el evento click, el valor de la variable mostrar cambiará y como `vue` es reactivo, va a estar leyendo la variable `mostrar` y de acuerdo a eso ocultará o mostrará la lista de series.
+
+
+**NOTA**
+
+Todos los listener de eventos de `vue` pueden ser breviado con el símbolo de la arroba (@) seguido del nombre del evento del DOM que queremo escuchar. 
+
+
+

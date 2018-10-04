@@ -8,13 +8,14 @@
 </head>
 <body>
     <div id="app">
-        <ul v-if="mostrar"> <!--   v-show="mostrar"   -->
+        <button @click="changeVisibility">Mostrar/Ocultar</button>
+        <ul v-if="mostrar">
             <li v-for="(show, index) in tvshows" v-bind:key="index">
                 <strong>{{show.name}}</strong> {{show.seasons}} Temporadas
             </li>
             <!-- <li v-for="(show, index) in tvshows" v-bind:key="index"></li> -->
         </ul>
-        <div v-else> <!--   v-hide="mostrar"   -->
+        <div v-else>
             No existen datos
         </div>
     </div>
@@ -30,6 +31,12 @@
                     {name: 'Breaking Bad', seasons: 5},
                     {name: 'La Casa de Papel', seasons: 2 }
                 ]
+            },
+            methods: {
+                //Método que cambia el atributo `mostrar` por el contrario
+                changeVisibility: function(){
+                    this.mostrar = !this.mostrar
+                }
             }
         })
     </script>
