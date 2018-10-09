@@ -19,6 +19,14 @@ Cada vez que se lanza el evento click, el valor de la variable mostrar cambiará
 **NOTA**
 
 Todos los listener de eventos de `vue` pueden ser breviado con el símbolo de la arroba (@) seguido del nombre del evento del DOM que queremo escuchar. 
+listener del evento vue: 
+    v-on:{DOMevent}
+
+Ejemplo
+
+    v-on:onkeypress="{function}"
+abreviación
+    @onkeypress="{function}"
 
 
 

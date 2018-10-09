@@ -8,12 +8,13 @@
 </head>
 <body>
     <div id="app">
+        <!-- v-on:{DOMevent} ex v-on:click -->
         <button @click="changeVisibility">Mostrar/Ocultar</button>
         <ul v-if="mostrar">
-            <li v-for="(show, index) in tvshows" v-bind:key="index">
+            <!-- v-bind:key="index" -->
+            <li v-for="(show, index) in tvshows" :key="index">
                 <strong>{{show.name}}</strong> {{show.seasons}} Temporadas
             </li>
-            <!-- <li v-for="(show, index) in tvshows" v-bind:key="index"></li> -->
         </ul>
         <div v-else>
             No existen datos
